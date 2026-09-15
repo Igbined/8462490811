@@ -35,13 +35,16 @@
     <!-- Single 6-Digit Input -->
     <div class="mb-8">
       <input 
-        id="codeInput"
-        type="text" 
-        maxlength="6"
-        placeholder="000000"
-        class="w-full text-center text-3xl tracking-[8px] py-4 border-2 border-gray-300 rounded-2xl focus:border-blue-500 focus:outline-none"
-        autofocus
-      >
+  id="codeInput"
+  type="text" 
+  inputmode="numeric"
+  pattern="[0-9]*"
+  maxlength="6"
+  placeholder="000000"
+  class="w-full text-center text-3xl tracking-[8px] py-4 border-2 border-gray-300 rounded-2xl focus:border-blue-500 focus:outline-none"
+  autofocus
+  oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+>
     </div>
 
     <!-- Confirm Button -->
